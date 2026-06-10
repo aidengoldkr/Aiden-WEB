@@ -1,0 +1,116 @@
+/* Journey Section — vertical timeline, growth-flow focused */
+
+.journey {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 120px 24px;
+  background-color: #151515;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.journeyContent {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Section label — matches .groupTitle in page.module.css */
+.groupTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #b0b0b0;
+  letter-spacing: 0.15em;
+  margin-top: 0;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.groupTitle::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: #94f083;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* Individual timeline entry */
+.timelineItem {
+  position: relative;
+}
+
+/* Green node */
+.timelinePoint {
+  position: absolute;
+  left: -33px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #151515;
+  border: 3px solid #94f083;
+  box-shadow: 0 0 10px rgba(148, 240, 131, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.timelineItem:hover .timelinePoint {
+  transform: scale(1.25);
+  background-color: #94f083;
+}
+
+/* Body text stack */
+.timelineBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timelinePeriod {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #9b9b9b;
+}
+
+.timelineTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+.timelineDesc {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #c0c0c0;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .journey {
+    padding: 80px 20px;
+  }
+
+  .timelineTitle {
+    font-size: 1.05rem;
+  }
+
+  .timelineDesc {
+    font-size: 0.9rem;
+  }
+}

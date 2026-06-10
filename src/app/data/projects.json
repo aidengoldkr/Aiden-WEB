@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ToDit",
+    "tagline": "할 일을 완료가 아닌, 기록으로 남기는 도구",
+    "description": "단순한 체크리스트를 넘어 — 무엇을, 왜, 어떻게 했는지를 흔적으로 쌓아가는 작업 관리 서비스. 완료된 일도 사라지지 않는다.",
+    "tags": ["Next.js", "TypeScript", "Supabase", "React"],
+    "link": "#"
+  },
+  {
+    "name": "inPaser",
+    "tagline": "정보를 읽는 것이 아니라, 구조로 분해하는 도구",
+    "description": "긴 텍스트와 문서를 AI가 핵심 단위로 파싱·분류해주는 인풋 처리 서비스. 정보 과잉 시대의 독해 보조 레이어.",
+    "tags": ["Python", "AI", "NLP", "FastAPI", "React"],
+    "link": "#"
+  },
+  {
+    "name": "ON-Alim",
+    "tagline": "필요한 알림만, 정확한 타이밍에",
+    "description": "흩어진 공지와 일정을 한 곳에서 수신·필터링하는 알림 통합 서비스. AI·SW 마에스트로 17기 팀 프로젝트.",
+    "tags": ["React", "TypeScript", "Node.js", "AI", "Push API"],
+    "link": "#"
+  },
+  {
+    "name": "Dankook Racing",
+    "tagline": "경주용 차량 데이터를 실시간으로 시각화",
+    "description": "단국대 부설 레이싱팀의 차량 센서 데이터를 수집·대시보드화하는 모니터링 시스템. 하드웨어와 소프트웨어 사이의 인터페이스.",
+    "tags": ["React", "WebSocket", "TypeScript", "Chart.js"],
+    "link": "#"
+  }
+]

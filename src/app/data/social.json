@@ -1,0 +1,17 @@
+[
+  {
+    "label": "GitHub",
+    "action": "View development logs",
+    "url": "https://github.com/aidengoldkr"
+  },
+  {
+    "label": "Tech Blog",
+    "action": "Read my thoughts",
+    "url": "#"
+  },
+  {
+    "label": "LinkedIn",
+    "action": "Connect professionally",
+    "url": "#"
+  }
+]
