@@ -1,7 +1,10 @@
 # Projects 섹션 작업 로그
 
 ## 담당 섹션
-Selected Projects — 대표 프로젝트 카드 그리드 섹션 (page.tsx의 4번 섹션)
+Selected Projects — 대표 프로젝트 쇼케이스 (page.tsx의 4번 섹션)
+
+> **2026-06-10 전면 리디자인:** 기존 2×2 카드 그리드 → **가로 스크롤형 sticky 쇼케이스**로 교체.
+> 데이터 구조(`projects.json`)는 그대로 유지하고 렌더링 컴포넌트 + 스타일만 교체. 상세는 아래 "리디자인" 섹션 참고.
 
 ---
 
@@ -9,9 +12,10 @@ Selected Projects — 대표 프로젝트 카드 그리드 섹션 (page.tsx의 4
 
 | 파일 경로 | 역할 |
 |---|---|
-| `src/app/components/Projects.tsx` | 섹션 컴포넌트 (Server Component) |
+| `src/app/components/Projects.tsx` | 섹션 컴포넌트 (**Client Component** — 스크롤 연동) |
 | `src/app/components/Projects.module.css` | 컴포넌트 전용 CSS Module |
-| `src/app/data/projects.json` | 프로젝트 데이터 (JSON-driven) |
+| `src/app/data/projects.json` | 프로젝트 데이터 (JSON-driven, 구조 불변) |
+| `src/app/projects/page.tsx` + `page.module.css` | "View All Projects" CTA 대상 `/projects` 라우트 (플레이스홀더) |
 | `docs/worklog/projects.md` | 본 작업 로그 |
 
 ---
@@ -100,7 +104,48 @@ section.projects
 > **실제 프로젝트 설명/링크가 플레이스홀더입니다.**
 >
 > `src/app/data/projects.json`의 모든 항목에서:
-> - `description`: 실제 프로젝트 소개 문구로 교체 필요
-> - `tagline`: 실제 한 줄 정의로 다듬기 필요
-> - `link`: 실제 프로젝트 URL 또는 GitHub 링크로 교체 필요 (현재 모두 `"#"`)
-> - `tags`: 실제 사용 스택으로 검증 및 수정 필요
+> - `description` / `tagline`: 실제 문구로 교체·다듬기
+> - `tags`: 실제 사용 스택으로 검증
+> - 각 프로젝트 대표 이미지가 생기면 우측 abstract preview를 실제 이미지로 교체 가능
+>
+> `/projects` 라우트는 데이터 기반 단순 리스트의 **플레이스홀더 페이지**입니다.
+
+---
+
+## 리디자인 (2026-06-10) — 가로 스크롤 sticky 쇼케이스
+
+### 동작 방식
+- 섹션이 **뷰포트보다 세로로 긴** 높이를 가짐(JS가 `innerHeight + 가로이동량`으로 계산).
+- 내부 `.sticky` 컨테이너가 `position: sticky; top: 0; height: 100vh; overflow: hidden`로 **화면에 고정(pin)**.
+- 세로 스크롤량을 `window.scrollY - sectionTop`으로 읽어 `.track`을 **가로 `translate3d`** — 1:1 매핑으로 자연스러운 속도.
+- 섹션 끝(가로 이동 완료) 후 sticky 해제 → 다음 섹션으로 일반 세로 스크롤 복귀.
+- **Framer Motion 미설치** → 순수 CSS sticky + 스크롤 리스너(`useEffect`) 방식으로 구현.
+
+### ⚠️ 중요: page.module.css `.page` overflow 제거
+- `position: sticky`는 조상 요소에 `overflow`가 `visible`이 아니면(=`overflow-x: hidden`만 있어도) 그 조상이 스크롤 컨테이너가 되어 **뷰포트 기준 고정이 깨짐**.
+- 따라서 `src/app/page.module.css`의 `.page`에서 `overflow-x: hidden; overflow-y: auto;` **제거**.
+- 가로 오버플로(트랙)는 `.sticky { overflow: hidden }`이 직접 클리핑하므로 가로 스크롤바는 생기지 않음.
+
+### 레이아웃
+```
+section.projects            ← JS가 height 지정(데스크탑) / auto(모바일)
+  div.sticky                ← 100vh 고정, overflow hidden
+    div.header              ← 라벨 + 큰 제목 + 짧은 설명 (상단 고정)
+    div.trackViewport       ← 카드 세로 중앙 정렬
+      div.track             ← inline transform: translate3d(x,0,0)
+        article.card × 4    ← 70vw / 58vh, 좌측 텍스트 + 우측 abstract preview
+          span.cardNumber   ← 01·02·03 큰 번호, 연한 워터마크
+        a.ctaCard           ← "View All Projects →" → <Link href="/projects">
+```
+
+### 카드 디자인
+- 너비 `70vw`(max 1040px), 높이 `58vh`(min 420px), 테두리 `1px solid rgba(255,255,255,0.08)`.
+- 좌측: 프로젝트명(크게) / tagline(초록 `#94f083`) / 설명(회색 `#a0a0a0`) / 태그 pill.
+- 우측 `.cardPreview`: 이미지가 없으므로 index별 **abstract preview 4종** — 코드 패널 / 라인 그래프(SVG) / 그리드 도트 / 바.
+- hover: `translateY(-6px)` + border 색상만 변경(과한 효과 없음).
+
+### 모바일 (`max-width: 768px`)
+- sticky/translate 해제 → **세로 카드 리스트** fallback. 카드 `flex-direction: column`, 높이 auto, 미리보기 하단 배치.
+
+### 검증
+- `npm run build` 통과. `/projects` 정적 생성 확인. `/`는 클라이언트 컴포넌트화로 번들 소폭 증가(6.5kB → 9kB).

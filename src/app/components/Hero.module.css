@@ -1,118 +1,136 @@
 /* ============================================================
-   Hero.module.css — self-contained, mirrors page.module.css style
+   Hero.module.css — updated for the requested layout
    ============================================================ */
 
-/* --- Keyframes (copied / adapted from page.module.css) --- */
+/* --- Keyframes --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes fadeInUpScroll {
-  from {
+@keyframes scrollAnim {
+  0% {
+    transform: translateY(-40px);
     opacity: 0;
-    transform: translate(-50%, 20px);
   }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-}
 
-@keyframes floatScroll {
-  0%   { transform: translate(-50%, 0); }
-  50%  { transform: translate(-50%, -8px); }
-  100% { transform: translate(-50%, 0); }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
 }
 
 /* --- Section root --- */
 .hero {
   position: relative;
   min-height: 100vh;
-  background-color: #202020;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  font-family: inherit;
 }
 
-/* --- Inner wrapper (gives controlled max-width / padding) --- */
-.heroInner {
+/* --- Top Bar --- */
+.topBar {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding: 0 24px;
-  width: 100%;
-  max-width: 900px;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* --- Language toggle (visual only) --- */
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #8d8d8d;
+}
+
+.greenDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #94f083;
+}
+
 .langToggle {
   display: flex;
   align-items: center;
-  gap: 6px;
-  opacity: 0;
-  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0s forwards;
+  gap: 12px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #8d8d8d;
 }
 
 .langBtn {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: #8d8d8d;
-  padding: 4px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
   cursor: default;
   user-select: none;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .langActive {
-  color: #94f083;
-  border-color: rgba(148, 240, 131, 0.35);
+  color: #f5f5f5;
 }
 
 .langDivider {
-  font-size: 0.75rem;
-  color: #8d8d8d;
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- Main content block --- */
+/* --- Center Content --- */
 .heroContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+  z-index: 5;
 }
 
-/* --- Title: 김건우 / Aidengoldkr --- */
 .mainTitle {
-  font-size: clamp(36px, 8vw, 96px);
+  font-size: clamp(48px, 6vw, 84px);
   line-height: 1.1;
   margin: 0;
+  display: flex;
+  align-items: center;
   opacity: 0;
   animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
 
 .name {
-  font-weight: 100;
+  font-weight: 300;
   color: #f5f5f5;
+  letter-spacing: -0.02em;
 }
 
 .slash {
-  font-weight: 900;
-  color: rgb(8, 95, 172);
-  margin: 0 10px;
+  font-weight: 400;
+  color: #3b82f6;
+  margin: 0 16px;
 }
 
 .handle {
@@ -120,147 +138,228 @@
   color: #94f083;
 }
 
-/* --- Subtitle --- */
 .subTitle {
-  font-size: clamp(14px, 2.5vw, 36px);
+  font-size: clamp(16px, 2.5vw, 24px);
   font-weight: 500;
   color: #f5f5f5;
   margin: 0;
+  margin-top: -10px;
   opacity: 0;
-  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
 }
 
 .subTitleSide {
-  font-size: 0.85em;
   font-weight: 300;
   color: #8d8d8d;
 }
 
-/* --- CTA row --- */
-.ctaRow {
+.tags {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 8px;
+  gap: 24px;
+  margin-top: 24px;
   opacity: 0;
-  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
 }
 
-.ctaPrimary,
-.ctaSecondary {
-  display: inline-block;
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  padding: 10px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  color: #8d8d8d;
+  font-weight: 400;
 }
 
-.ctaPrimary {
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dotGreen {
   background-color: #94f083;
-  color: #202020;
-  border: 1px solid #94f083;
 }
 
-.ctaPrimary:hover {
-  background-color: #7dde6c;
-  border-color: #7dde6c;
+.dotBlue {
+  background-color: #3b82f6;
 }
 
-.ctaSecondary {
-  background-color: transparent;
-  color: #c0c0c0;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.tagDivider {
+  width: 1px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
-.ctaSecondary:hover {
-  border-color: rgba(8, 95, 172, 0.6);
-  color: rgb(8, 95, 172);
+/* --- Bottom Left --- */
+.bottomLeft {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
 }
 
-/* --- Social icons --- */
 .socials {
   display: flex;
   align-items: center;
-  gap: 20px;
-  opacity: 0;
-  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards;
+  gap: 12px;
 }
 
-.socialLink {
+.socialBox {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #8d8d8d;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialBox:hover {
+  color: #f5f5f5;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.connectLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
   color: #8d8d8d;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.socialLink:hover {
+.connectLink:hover {
+  color: #f5f5f5;
+}
+
+.arrow {
   color: #94f083;
 }
 
-/* --- Scroll indicator (float animation, same pattern as page.module.css) --- */
+/* --- Scroll Down --- */
 .scrollDown {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  color: #8d8d8d;
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  z-index: 10;
   opacity: 0;
-  animation:
-    fadeInUpScroll 1s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards,
-    floatScroll 2s ease-in-out 2.4s infinite;
-  cursor: pointer;
-  user-select: none;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
 }
 
-.scrollDown::after {
-  content: "";
+.scrollLine {
+  position: relative;
   width: 1px;
-  height: 24px;
-  background-color: #8d8d8d;
-  opacity: 0.4;
-  transition: opacity 0.3s;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.scrollDown:hover::after {
-  opacity: 0.8;
+.scrollDot {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #94f083;
+  border-radius: 50%;
+  animation: scrollAnim 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+/* --- Side Nav --- */
+.sideNav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4d4d4d54;
+  padding: 4px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 50;
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+
+.navDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.navDotActive {
+  background-color: #94f083;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .heroInner {
-    gap: 32px;
-    padding: 0 20px;
+  .topBar {
+    top: 20px;
+    left: 20px;
+    right: 20px;
   }
 
-  .ctaRow {
+  .bottomLeft {
+    bottom: 20px;
+    left: 20px;
     flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .ctaPrimary,
-  .ctaSecondary {
-    width: 100%;
-    text-align: center;
-  }
-
-  .socials {
+    align-items: flex-start;
     gap: 16px;
   }
 
   .scrollDown {
-    bottom: 28px;
+    bottom: 20px;
+    display: none;
+    /* Might want to hide on mobile if it overlaps */
+  }
+
+  .sideNav {
+    display: none;
+    /* Hide side nav on mobile */
+  }
+
+  .mainTitle {
+    font-size: clamp(32px, 8vw, 48px);
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .slash {
+    display: none;
+    /* Hide slash on mobile if stacked */
+  }
+
+  .tags {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tagDivider {
+    display: none;
+    /* Hide vertical dividers */
   }
 }

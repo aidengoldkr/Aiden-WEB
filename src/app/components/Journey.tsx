@@ -3,7 +3,7 @@ import journeyData from "../data/journey.json";
 
 export default function Journey() {
   return (
-    <section className={styles.journey}>
+    <section className={styles.journey} id="journey">
       <div className={styles.journeyContent}>
         <h3 className={styles.groupTitle}>JOURNEY</h3>
         <div className={styles.timeline}>

@@ -4,7 +4,7 @@ import introData from "../data/intro.json";
 
 export default function Hello() {
   return (
-    <section className={styles.hello}>
+    <section className={styles.hello} id="hello">
       <div className={styles.helloContent}>
         {/* Profile image with gradient border */}
         <div className={styles.profileWrapper}>
