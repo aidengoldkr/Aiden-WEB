@@ -1,10 +1,5 @@
 [
   {
-    "label": "숨고 (soomgo)",
-    "action": "웹 및 SW 외주 개발 문의",
-    "url": "https://soomgo.com/profile/users/12683824"
-  },
-  {
     "label": "Tech Blog",
     "action": "Read my thoughts",
     "url": "https://blog.aidengoldkr.dev/"
@@ -28,5 +23,10 @@
     "label": "Gmail",
     "action": "Contact me",
     "url": "https://mail.google.com/mail/?view=cm&fs=1&to=contact@aidengoldkr.dev"
+  },
+  {
+    "label": "숨고 (soomgo)",
+    "action": "웹 및 SW 외주 개발 문의",
+    "url": "https://soomgo.com/profile/users/12683824"
   }
 ]
