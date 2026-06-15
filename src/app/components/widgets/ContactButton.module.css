@@ -1,0 +1,80 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactButton {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #23232354;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 10px;
+  gap: 24px;
+  z-index: 50;
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.socialBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #8d8d8d;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialBox:hover {
+  color: #f5f5f5;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.connectLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #8d8d8d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.connectLink:hover {
+  color: #f5f5f5;
+}
+
+.arrow {
+  color: #94f083;
+}
+
+@media (max-width: 768px) {
+  .contactButton {
+    bottom: 12px;
+    left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

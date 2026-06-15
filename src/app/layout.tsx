@@ -79,6 +79,8 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
+import { LanguageProvider } from "./context/LanguageContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -86,7 +88,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,113 @@
+[
+  {
+    "year": "2026",
+    "summary": "Focused on building and operating products that meet real users, from service work to startup ideas.",
+    "records": [
+      {
+        "label": "Work",
+        "items": [
+          "Joined the 17th AI·SW Maestro program",
+          "Built and operated the ON-Alim service",
+          "Delivered freelance products from real client requirements"
+        ]
+      },
+      {
+        "label": "Learned",
+        "items": [
+          "How to turn an idea into a deployable service",
+          "How to improve a product through user feedback"
+        ]
+      },
+      {
+        "label": "Awards",
+        "items": [
+          "Dynamic Dankook Startup Idea Competition, High School Division - Excellence Award"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "summary": "Started software development in earnest and experienced the full product cycle from planning to implementation.",
+    "records": [
+      {
+        "label": "Work",
+        "items": [
+          "Entered Dankook University Software High School as part of the 6th class",
+          "Planned and developed the inPaser and ToDit projects",
+          "Completed the Asan Youth-preneur Startup Atelier"
+        ]
+      },
+      {
+        "label": "Learned",
+        "items": [
+          "How to implement a business model as a working product",
+          "The flow from problem definition to design, development, and pitching"
+        ]
+      },
+      {
+        "label": "Awards",
+        "items": [
+          "DAEA Life Safety App Challenge - Grand Prize",
+          "Hanyang University Youth Open SW GAME Coding Competition - Excellence Award",
+          "Asan Youth-preneur Demo Day - Pitching Excellence Award and Booth Encouragement Award"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "summary": "Learned to view ideas through technology and market lenses, then expand them into business models.",
+    "records": [
+      {
+        "label": "Work",
+        "items": [
+          "Joined KAIST IP Academy for Gifted Entrepreneurs, 14th class",
+          "Participated in global entrepreneurship training"
+        ]
+      },
+      {
+        "label": "Learned",
+        "items": [
+          "How to evaluate ideas by product value and business potential",
+          "How to connect technology, intellectual property, and market needs"
+        ]
+      },
+      {
+        "label": "Awards",
+        "items": [
+          "KAIST IP Academy Future Technology Team Project - Excellence Award"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2020",
+    "summary": "Built a foundation in spotting problems and shaping invention ideas into concrete outcomes.",
+    "records": [
+      {
+        "label": "Work",
+        "items": [
+          "Joined the Donong Invention Education Center three-year program",
+          "Participated in youth invention programs and invention reporter activities"
+        ]
+      },
+      {
+        "label": "Learned",
+        "items": [
+          "How to observe problems and structure solution ideas",
+          "The basics of protecting invention ideas as intellectual property"
+        ]
+      },
+      {
+        "label": "Awards",
+        "items": [
+          "Guri-Namyangju Student Invention Exhibition - Gold Medal",
+          "KOFST Korea Science Creativity Competition - Bronze Medal",
+          "KIPA Youth Inventor Program - Encouragement Award and Completion",
+          "Gyeonggi-do Student Invention Exhibition - Excellence Award"
+        ]
+      }
+    ]
+  }
+]

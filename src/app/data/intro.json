@@ -1,18 +1,26 @@
 {
-  "greeting": "Hello World! 👋",
+  "greeting": "Hello There! 👋",
   "headline": "제품을 설계하고 구현하는 개발자",
-  "description": "문제의 맥락을 읽고, 아이디어를 빠르게 실행하여 완성도 높은 서비스로 연결하는 <strong>김건우 / Aidengoldkr</strong>입니다. AI · Product · Frontend 중심으로 전체 프로덕트 사이클을 거치며 가치를 창출합니다.",
+  "description": "문제를 파악하고, 아이디어를 빠르게 실행하여 완성도 높은 서비스로 연결하는 <strong>김건우 / Aidengoldkr</strong> 입니다.<br/>AI · Product · Frontend 중심으로 전체 프로덕트 사이클을 거치며 가치를 창출하는 것을 즐깁니다.",
   "tags": [
     "Product Builder",
-    "Frontend",
-    "AI Service",
     "SW Maestro 17th",
-    "DKSH 6th"
+    "DKSH 6th",
+    "KAIST CCE 14th",
+    "INTJ"
   ],
   "stats": [
-    { "value": "6+", "label": "Years Building" },
-    { "value": "5+", "label": "Projects" },
-    { "value": "3+", "label": "Awards" },
-    { "value": "AI·SW", "label": "Maestro" }
+    {
+      "value": "6+",
+      "label": "Years Building"
+    },
+    {
+      "value": "5+",
+      "label": "Projects"
+    },
+    {
+      "value": "10+",
+      "label": "Awards"
+    }
   ]
 }

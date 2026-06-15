@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ToDit",
+    "tagline": "A tool that records tasks as footprints rather than just checking them off",
+    "description": "Beyond a simple checklist — a task management service that logs what, why, and how you accomplished things. Finished tasks never vanish.",
+    "tags": ["Next.js", "TypeScript", "Supabase", "React"],
+    "link": "#"
+  },
+  {
+    "name": "inPaser",
+    "tagline": "A tool that doesn't just read information, but decomposes it into structures",
+    "description": "An input processing service that parses and classifies long texts and documents into core units using AI. A reading assistant layer for the information overload era.",
+    "tags": ["Python", "AI", "NLP", "FastAPI", "React"],
+    "link": "#"
+  },
+  {
+    "name": "ON-Alim",
+    "tagline": "Only the notifications you need, at the exact right timing",
+    "description": "A notification integration service that receives and filters scattered notices and schedules in one place. AI·SW Maestro 17th team project.",
+    "tags": ["React", "TypeScript", "Node.js", "AI", "Push API"],
+    "link": "#"
+  },
+  {
+    "name": "Dankook Racing",
+    "tagline": "Real-time visualization of racing car telemetry data",
+    "description": "A monitoring system that collects and dashboards vehicle sensor telemetry data for the Dankook Racing Team. An interface between hardware and software.",
+    "tags": ["React", "WebSocket", "TypeScript", "Chart.js"],
+    "link": "#"
+  }
+]

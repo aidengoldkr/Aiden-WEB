@@ -1,0 +1,71 @@
+{
+  "career": [
+    {
+      "period": "2026 ~ Present",
+      "title": "17th AI·SW Maestro",
+      "description": "Youngest Trainee"
+    },
+    {
+      "period": "2025 ~ Present",
+      "title": "Dankook University High School of Software",
+      "description": "Enrolled (6th Class)"
+    },
+    {
+      "period": "2023-2024",
+      "title": "KAIST IP Academy for Gifted Entrepreneurs",
+      "description": "Completed Basic & Advanced Courses"
+    },
+    {
+      "period": "2020-2022",
+      "title": "Donong Invention Education Center",
+      "description": "Completed 3-Year Program"
+    }
+  ],
+  "awards": [
+    {
+      "year": "2026",
+      "items": [
+        "Dynamic Dankook Startup Idea Competition (High School Division) - Excellence Award"
+      ]
+    },
+    {
+      "year": "2025",
+      "items": [
+        "DAEA Life Safety App Challenge - Grand Prize (1st Place)",
+        "Hanyang University Youth Open SW GAME Coding Competition - Excellence Award",
+        "Asan Youth-preneur Demo Day - Pitching Excellence Award / Booth Encouragement Award"
+      ]
+    },
+    {
+      "year": "2023",
+      "items": [
+        "KAIST IP Academy Future Technology Team Project - Excellence Award"
+      ]
+    },
+    {
+      "year": "~ 2022",
+      "items": [
+        "Guri-Namyangju Student Invention Exhibition - Gold Medal",
+        "KOFST Korea Science Creativity Competition - Bronze Medal",
+        "KIPA Youth Inventor Program (YIP) - Encouragement Award & Completion",
+        "Gyeonggi-do Student Invention Exhibition - Excellence Award",
+        "Ministry of Science and ICT Science Day Commendation",
+        "Guri-Namyangju Student Invention Exhibition - Bronze Medal"
+      ]
+    }
+  ],
+  "experience": [
+    "2022 Youth Inventor Program (YIP) - Completed",
+    "KIPO Youth Invention Reporter Corps - 16th~17th term",
+    "KAIST IP-CEO 2023 Global Entrepreneurship Training",
+    "2025 Asan Youth-preneur Startup Atelier - Completed",
+    "DKSH VERTEX Digital Convergence Product Dev Dept - 1st President & Co-founder",
+    "ESSENTIA Science Information & Communications Dept Chief"
+  ],
+  "certificates": [
+    "COS Pro Python 1st Grade",
+    "COS Pro C++ 1st Grade",
+    "TRIZ Specialist Level 1",
+    "1 Registered Patent / 12 Patent Applications"
+  ]
+}
