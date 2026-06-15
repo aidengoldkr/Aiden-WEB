@@ -86,8 +86,8 @@ export default function Projects() {
   const [sectionHeight, setSectionHeight] = useState<number | "auto">("auto");
   const [translateX, setTranslateX] = useState(0);
 
-  // Drive the horizontal track translate from the vertical scroll position
-  // while the section is pinned (CSS sticky). 1:1 mapping for a natural feel.
+  // Drive horizontal travel from the actual rendered track width so the pinned
+  // scroll length follows the current project count, card width, and CTA width.
   useEffect(() => {
     const section = sectionRef.current;
     const track = trackRef.current;
@@ -95,12 +95,16 @@ export default function Projects() {
 
     let maxX = 0;
     let sectionTop = 0;
+    let frame = 0;
     const wheelTickPause = 240;
     const startPause = wheelTickPause;
     const endPause = wheelTickPause;
 
     const update = () => {
-      if (maxX <= 0) return;
+      if (maxX <= 0) {
+        setTranslateX(0);
+        return;
+      }
       const currentScroll = window.scrollY - sectionTop;
       const horizontalScroll = currentScroll - startPause;
       const scrolled = Math.min(Math.max(horizontalScroll, 0), maxX);
@@ -122,23 +126,38 @@ export default function Projects() {
       }
 
       maxX = Math.max(0, track.scrollWidth - window.innerWidth);
+      if (maxX <= 0) {
+        setSectionHeight(window.innerHeight);
+        setTranslateX(0);
+        return;
+      }
       // extra scroll distance == horizontal travel + start/end buffers → pinned section length
       setSectionHeight(window.innerHeight + maxX + startPause + endPause);
       update();
     };
 
+    const scheduleMeasure = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(measure);
+    };
+
     measure();
     // re-measure after layout settles (fonts / reflow)
     const raf = requestAnimationFrame(measure);
+    const resizeObserver = new ResizeObserver(scheduleMeasure);
+
+    resizeObserver.observe(track);
     window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", measure);
+    window.addEventListener("resize", scheduleMeasure);
 
     return () => {
       cancelAnimationFrame(raf);
+      cancelAnimationFrame(frame);
+      resizeObserver.disconnect();
       window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", measure);
+      window.removeEventListener("resize", scheduleMeasure);
     };
-  }, []);
+  }, [projectsData.length]);
 
   return (
     <section

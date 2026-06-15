@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import styles from "./Hello.module.css";
 import introDataKo from "../data/intro.json";
 import introDataEn from "../data/intro_en.json";

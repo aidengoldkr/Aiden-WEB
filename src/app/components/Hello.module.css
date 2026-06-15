@@ -42,9 +42,9 @@
 .profileWrapper {
   position: relative;
   flex-shrink: 0;
-  width: min(100%, 300px);
+  width: min(100%, 320px);
   aspect-ratio: 1;
-  justify-self: start;
+  justify-self: end;
   border-radius: 26px;
   overflow: hidden;
   background: linear-gradient(135deg, #94f083 0%, #2467b2 100%);
@@ -68,6 +68,39 @@
   object-fit: cover;
   border-radius: 24px;
   background-color: #202020;
+}
+
+.helloAside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-self: end;
+  gap: 22px;
+  width: 100%;
+}
+
+.asideMeta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  max-width: 320px;
+}
+
+.asideMeta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+  color: #c0c0c0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .helloDetails {
@@ -174,8 +207,11 @@
 
 @media (max-width: 1024px) {
   .helloContent {
-    grid-template-columns: 240px minmax(0, 1fr);
     gap: 48px;
+  }
+
+  .profileWrapper {
+    width: min(100%, 260px);
   }
 
   .statsList {
@@ -207,6 +243,15 @@
   .profileWrapper {
     width: min(76vw, 260px);
     justify-self: start;
+  }
+
+  .helloAside {
+    align-items: flex-start;
+    justify-self: start;
+  }
+
+  .asideMeta {
+    justify-content: flex-start;
   }
 
   .helloDescription {

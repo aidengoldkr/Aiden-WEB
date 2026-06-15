@@ -1,30 +1,39 @@
 [
   {
     "name": "ToDit",
-    "tagline": "할 일을 완료가 아닌, 기록으로 남기는 도구",
-    "description": "단순한 체크리스트를 넘어 — 무엇을, 왜, 어떻게 했는지를 흔적으로 쌓아가는 작업 관리 서비스. 완료된 일도 사라지지 않는다.",
-    "tags": ["Next.js", "TypeScript", "Supabase", "React"],
+    "tagline": "생각을 실행 가능한 구조로 변환하는 AI 기반 작업 시스템",
+    "description": "텍스트·이미지 등 비정형 입력을 해석해 목표를 실행 가능한 작업 단위로 구조화하는 생산성 플랫폼. 단순 TODO를 넘어, 인간의 사고와 실행 과정을 트리 형태로 외부화하고 관리한다.",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "React"
+    ],
     "link": "#"
   },
   {
-    "name": "inPaser",
-    "tagline": "정보를 읽는 것이 아니라, 구조로 분해하는 도구",
-    "description": "긴 텍스트와 문서를 AI가 핵심 단위로 파싱·분류해주는 인풋 처리 서비스. 정보 과잉 시대의 독해 보조 레이어.",
-    "tags": ["Python", "AI", "NLP", "FastAPI", "React"],
+    "name": "BaekJoon Memorial",
+    "tagline": "알고리즘 문화의 한 시대를 기록한 메모리얼 웹",
+    "description": "백준 온라인 저지 종료 이슈 당시 사용자들의 마지막 기록과 메시지를 남길 수 있도록 제작된 참여형 메모리얼 웹. 단시간 내 개발·배포되었으며 커뮤니티와 기사 등을 통해 빠르게 확산된 프로젝트.",
+    "tags": [
+      "Next.js",
+      "Supabase",
+      "NextAuth",
+      "TanStack"
+    ],
     "link": "#"
   },
   {
-    "name": "ON-Alim",
-    "tagline": "필요한 알림만, 정확한 타이밍에",
-    "description": "흩어진 공지와 일정을 한 곳에서 수신·필터링하는 알림 통합 서비스. AI·SW 마에스트로 17기 팀 프로젝트.",
-    "tags": ["React", "TypeScript", "Node.js", "AI", "Push API"],
-    "link": "#"
-  },
-  {
-    "name": "Dankook Racing",
-    "tagline": "경주용 차량 데이터를 실시간으로 시각화",
-    "description": "단국대 부설 레이싱팀의 차량 센서 데이터를 수집·대시보드화하는 모니터링 시스템. 하드웨어와 소프트웨어 사이의 인터페이스.",
-    "tags": ["React", "WebSocket", "TypeScript", "Chart.js"],
+    "name": "ESSENTIA Science",
+    "tagline": "학생 연구 조직 운영을 위한 통합 관리 플랫폼",
+    "description": "ESSENTIA Science의 홈페이지를 넘어 회원·조직·프로젝트·포럼·투표·자료실 등을 통합 운영할 수 있도록 설계된 웹 기반 단체 관리 시스템.",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "AI",
+      "Push API"
+    ],
     "link": "#"
   }
 ]
