@@ -864,7 +864,7 @@
           "description": "story_wave.json 기반의 데이터 주도 웨이브와 start·story·game·ending 씬 전환을 지원해, 콘텐츠를 코드 수정 없이 데이터로 조정할 수 있게 했다."
         }
       ],
-      "architecture": "main.py의 Game 클래스를 중심으로 spirit·monster·effect·button·mana 등 지원 모듈이 결합된 pygame 구조이며, 웨이브·원소 데이터를 외부 파일로 분리해 데이터 주도 설계를 적용했다.",
+      "architecture": "main.py의 Game 클래스를 중심으로 spirit·monster·effect·button·mana 등 지원 모듈이 결합된 pygame 구조이며, 웨이브·원소 데이터를 외부 파일로 분리해 데이터 주도 설계 (DDD)를 적용했다.",
       "learnings": "실시간 게임 루프와 상태머신, 데이터 기반 웨이브 설계를 직접 다루는 한편, 팀 개발에서는 코드 자체보다 Git workflow와 데이터·에셋 구조를 정리하는 일이 협업 속도를 좌우한다는 점을 경험했다."
     },
     "achievements": {
@@ -874,7 +874,7 @@
           "organization": "한양대학교 ERICA",
           "date": "2025",
           "rank": "우수상",
-          "description": "pygame으로 구현한 4x6 그리드 기반 원소 디펜스 게임"
+          "description": "팀 오페르투나"
         }
       ],
       "metrics": [],

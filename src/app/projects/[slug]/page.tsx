@@ -154,13 +154,13 @@ export default function ProjectDetailPage({
         <section className={styles.section}>
           {details.problem && (
             <div className={styles.block}>
-              <h2 className={styles.blockLabel}>{t("문제", "Problem")}</h2>
+              <h2 className={styles.blockLabel}>{t("Problem", "Problem")}</h2>
               <p className={styles.blockText}>{details.problem}</p>
             </div>
           )}
           {details.solution && (
             <div className={styles.block}>
-              <h2 className={styles.blockLabel}>{t("해결", "Solution")}</h2>
+              <h2 className={styles.blockLabel}>{t("Solution", "Solution")}</h2>
               <p className={styles.blockText}>{details.solution}</p>
             </div>
           )}
@@ -169,7 +169,7 @@ export default function ProjectDetailPage({
 
       {details.keyFeatures.length > 0 && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("핵심 기능", "Key features")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Key features", "Key features")}</h2>
           <div className={styles.featureGrid}>
             {details.keyFeatures.map((f, i) => (
               <div key={i} className={styles.feature}>
@@ -183,7 +183,7 @@ export default function ProjectDetailPage({
 
       {techGroups.length > 0 && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("기술 스택", "Tech stack")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Tech stack", "Tech stack")}</h2>
           <div className={styles.techGroups}>
             {techGroups.map((g) => (
               <div key={g} className={styles.techGroup}>
@@ -205,14 +205,14 @@ export default function ProjectDetailPage({
 
       {showTeamSection && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("팀 / 역할", "Team / Role")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Team / Role", "Team / Role")}</h2>
           <p className={styles.teamMeta}>
-            {t("팀 프로젝트", "Team project")}
+            {t("Team project", "Team project")}
             {team.size ? ` · ${team.size}${t("명", " members")}` : ""}
           </p>
           <div className={styles.roleGrid}>
             <article className={styles.myRoleCard}>
-              <span className={styles.roleEyebrow}>{t("내 담당", "My ownership")}</span>
+              <span className={styles.roleEyebrow}>{t("My Role", "My Role")}</span>
               {team.contribution && (
                 <p className={styles.myRoleText}>{team.contribution}</p>
               )}
@@ -248,14 +248,14 @@ export default function ProjectDetailPage({
 
       {details.architecture && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("아키텍처", "Architecture")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Architecture", "Architecture")}</h2>
           <p className={styles.blockText}>{details.architecture}</p>
         </section>
       )}
 
       {achievements.metrics.length > 0 && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("지표", "Metrics")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Metrics", "Metrics")}</h2>
           <div className={styles.metricGrid}>
             {achievements.metrics.map((m, i) => (
               <div key={i} className={styles.metric}>
@@ -269,7 +269,7 @@ export default function ProjectDetailPage({
 
       {achievements.awards.length > 0 && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("수상", "Awards")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Awards", "Awards")}</h2>
           <ul className={styles.recordList}>
             {achievements.awards.map((a, i) => (
               <li key={i} className={styles.record}>
@@ -318,7 +318,7 @@ export default function ProjectDetailPage({
 
       {details.learnings && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("배운 점", "Learnings")}</h2>
+          <h2 className={styles.sectionTitle}>{t("Learnings", "Learnings")}</h2>
           <p className={styles.blockText}>{details.learnings}</p>
         </section>
       )}
