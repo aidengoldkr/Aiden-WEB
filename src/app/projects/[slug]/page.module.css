@@ -1,0 +1,430 @@
+.wrap {
+  min-height: 100vh;
+  background-color: #202020;
+  color: #f5f5f5;
+  box-sizing: border-box;
+  max-width: calc(880px * var(--desktop-scale));
+  margin: 0 auto;
+  padding: calc(96px * var(--desktop-scale)) 24px calc(120px * var(--desktop-scale));
+}
+
+.back {
+  display: inline-block;
+  font-size: calc(0.9rem * var(--desktop-scale));
+  font-weight: 500;
+  color: #8d8d8d;
+  text-decoration: none;
+  margin-bottom: calc(48px * var(--desktop-scale));
+  transition: color 0.2s ease;
+}
+
+.back:hover {
+  color: #94f083;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: calc(14px * var(--desktop-scale));
+  margin-bottom: calc(40px * var(--desktop-scale));
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  font-size: calc(0.72rem * var(--desktop-scale));
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c0c0c0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.badgeStatus {
+  color: #94f083;
+  border-color: rgba(148, 240, 131, 0.4);
+}
+
+.period {
+  font-size: calc(0.8rem * var(--desktop-scale));
+  font-weight: 500;
+  color: #8d8d8d;
+}
+
+.title {
+  font-size: calc(clamp(2rem, 5vw, 3rem) * var(--desktop-scale));
+  font-weight: 700;
+  color: #f5f5f5;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: calc(1.1rem * var(--desktop-scale));
+  font-weight: 500;
+  color: #94f083;
+  margin: 0;
+}
+
+.summary {
+  font-size: calc(1rem * var(--desktop-scale));
+  font-weight: 300;
+  color: #a8a8a8;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: calc(10px * var(--desktop-scale));
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: calc(0.85rem * var(--desktop-scale));
+  font-weight: 600;
+  color: #202020;
+  background: #94f083;
+  border-radius: 999px;
+  padding: calc(9px * var(--desktop-scale)) calc(18px * var(--desktop-scale));
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.linkBtn:hover {
+  opacity: 0.85;
+}
+
+.thumb {
+  margin: 0 0 calc(48px * var(--desktop-scale));
+}
+
+.description {
+  font-size: calc(1.02rem * var(--desktop-scale));
+  font-weight: 300;
+  line-height: 1.8;
+  color: #b5b5b5;
+  margin: 0 0 calc(56px * var(--desktop-scale));
+}
+
+.soloRoleNote {
+  margin: calc(-32px * var(--desktop-scale)) 0 calc(56px * var(--desktop-scale));
+  border-left: 2px solid rgba(148, 240, 131, 0.55);
+  padding-left: calc(18px * var(--desktop-scale));
+}
+
+.soloRoleText {
+  font-size: calc(0.92rem * var(--desktop-scale));
+  font-weight: 400;
+  line-height: 1.7;
+  color: #cfcfcf;
+  margin: 0;
+}
+
+.section {
+  padding: calc(40px * var(--desktop-scale)) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sectionTitle {
+  font-size: calc(0.95rem * var(--desktop-scale));
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  margin: 0 0 calc(24px * var(--desktop-scale));
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTitle::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: #94f083;
+  flex-shrink: 0;
+}
+
+.block {
+  margin-bottom: calc(28px * var(--desktop-scale));
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+.blockLabel {
+  font-size: calc(0.85rem * var(--desktop-scale));
+  font-weight: 700;
+  color: #94f083;
+  margin: 0 0 calc(10px * var(--desktop-scale));
+}
+
+.blockText {
+  font-size: calc(0.98rem * var(--desktop-scale));
+  font-weight: 300;
+  line-height: 1.8;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: calc(20px * var(--desktop-scale));
+}
+
+.feature {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: calc(22px * var(--desktop-scale));
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.featureTitle {
+  font-size: calc(1.02rem * var(--desktop-scale));
+  font-weight: 600;
+  color: #f5f5f5;
+  margin: 0 0 calc(8px * var(--desktop-scale));
+}
+
+.featureText {
+  font-size: calc(0.9rem * var(--desktop-scale));
+  font-weight: 300;
+  line-height: 1.7;
+  color: #9b9b9b;
+  margin: 0;
+}
+
+.techGroups {
+  display: flex;
+  flex-direction: column;
+  gap: calc(18px * var(--desktop-scale));
+}
+
+.techGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: calc(12px * var(--desktop-scale));
+}
+
+.techGroupLabel {
+  font-size: calc(0.78rem * var(--desktop-scale));
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7c7c7c;
+  min-width: calc(110px * var(--desktop-scale));
+}
+
+.teamMeta {
+  font-size: calc(0.85rem * var(--desktop-scale));
+  font-weight: 600;
+  color: #94f083;
+  margin: 0 0 calc(14px * var(--desktop-scale));
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: calc(16px * var(--desktop-scale));
+}
+
+.myRoleCard,
+.memberRoleCard {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.myRoleCard {
+  grid-row: span 2;
+  padding: calc(24px * var(--desktop-scale));
+  border-color: rgba(148, 240, 131, 0.28);
+  background: rgba(148, 240, 131, 0.045);
+}
+
+.memberRoleCard {
+  padding: calc(18px * var(--desktop-scale));
+}
+
+.roleEyebrow,
+.memberLabel {
+  display: block;
+  font-size: calc(0.74rem * var(--desktop-scale));
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.roleEyebrow {
+  color: #94f083;
+  margin-bottom: calc(12px * var(--desktop-scale));
+}
+
+.memberLabel {
+  color: #8d8d8d;
+  margin-bottom: calc(8px * var(--desktop-scale));
+}
+
+.myRoleText {
+  font-size: calc(1rem * var(--desktop-scale));
+  font-weight: 400;
+  line-height: 1.75;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.memberContribution {
+  font-size: calc(0.88rem * var(--desktop-scale));
+  font-weight: 300;
+  line-height: 1.65;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: calc(12px * var(--desktop-scale));
+}
+
+.tagList:first-child {
+  margin-top: 0;
+}
+
+.tag {
+  font-size: calc(0.75rem * var(--desktop-scale));
+  font-weight: 500;
+  color: #c0c0c0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: calc(5px * var(--desktop-scale)) calc(12px * var(--desktop-scale));
+  letter-spacing: 0.03em;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: calc(16px * var(--desktop-scale));
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: calc(20px * var(--desktop-scale));
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.metricValue {
+  font-size: calc(1.05rem * var(--desktop-scale));
+  font-weight: 600;
+  color: #f5f5f5;
+  line-height: 1.4;
+}
+
+.metricLabel {
+  font-size: calc(0.78rem * var(--desktop-scale));
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7c7c7c;
+}
+
+.recordList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px * var(--desktop-scale));
+}
+
+.record {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recordTitle {
+  font-size: calc(1rem * var(--desktop-scale));
+  font-weight: 600;
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.recordTitle:hover {
+  color: #94f083;
+}
+
+.rank {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: calc(0.7rem * var(--desktop-scale));
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #94f083;
+  background: rgba(148, 240, 131, 0.1);
+  border: 1px solid rgba(148, 240, 131, 0.35);
+  border-radius: 999px;
+  padding: 2px 9px;
+  vertical-align: middle;
+}
+
+.recordMeta {
+  font-size: calc(0.82rem * var(--desktop-scale));
+  font-weight: 300;
+  color: #8d8d8d;
+}
+
+.recordDesc {
+  font-size: calc(0.88rem * var(--desktop-scale));
+  font-weight: 300;
+  line-height: 1.6;
+  color: #9b9b9b;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 72px 20px 96px;
+  }
+
+  .techGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .techGroupLabel {
+    min-width: 0;
+  }
+
+  .roleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .myRoleCard {
+    grid-row: auto;
+  }
+}

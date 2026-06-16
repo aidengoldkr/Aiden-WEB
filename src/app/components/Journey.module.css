@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 110px var(--layout-edge);
+  padding: calc(110px * var(--desktop-scale)) var(--layout-edge);
 
   background-color: #151515;
   min-height: 100vh;
@@ -12,18 +12,19 @@
 }
 
 .journeyContent {
-  max-width: none;
+  max-width: var(--layout-max-width);
   width: 100%;
+  margin-inline: auto;
   overflow: visible;
 }
 
 .groupTitle {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem * var(--desktop-scale));
   font-weight: 700;
   color: #b0b0b0;
   letter-spacing: 0.15em;
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: calc(42px * var(--desktop-scale));
   display: flex;
   align-items: center;
   gap: 10px;
@@ -41,8 +42,8 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(180px, 1fr));
-  gap: clamp(22px, 3vw, 42px);
-  padding-top: 30px;
+  gap: calc(clamp(22px, 3vw, 42px) * var(--desktop-scale));
+  padding-top: calc(30px * var(--desktop-scale));
 }
 
 .timeline::before {
@@ -102,7 +103,7 @@
 }
 
 .timelinePhase {
-  font-size: clamp(2rem, 3vw, 3.35rem);
+  font-size: calc(clamp(2rem, 3vw, 3.35rem) * var(--desktop-scale));
   font-weight: 500;
   line-height: 0.9;
   color: #f5f5f5;
@@ -111,7 +112,7 @@
 }
 
 .timelinePeriod {
-  font-size: clamp(0.5rem, 2vw, 3.35rem);
+  font-size: calc(clamp(0.5rem, 2vw, 3.35rem) * var(--desktop-scale));
   font-weight: 200;
   line-height: 0.9;
   color: #535353;
@@ -120,7 +121,7 @@
 
 .timelineSummary {
   max-width: none;
-  font-size: clamp(1rem, 1.45vw, 1.2rem);
+  font-size: calc(clamp(1rem, 1.45vw, 1.2rem) * var(--desktop-scale));
   font-weight: 650;
   line-height: 1.45;
   color: #cccccc;
@@ -142,7 +143,7 @@
 
 .recordLabel {
   display: block;
-  font-size: 0.72rem;
+  font-size: calc(0.72rem * var(--desktop-scale));
   font-weight: 700;
   color: #94f083;
   letter-spacing: 0.08em;
@@ -161,21 +162,21 @@
 .recordList li {
   position: relative;
   padding-left: 14px;
-  font-size: 0.82rem;
+  font-size: calc(0.82rem * var(--desktop-scale));
   font-weight: 300;
   line-height: 1.65;
   color: #c0c0c0;
 }
 
 .achievementSection {
-  margin-top: 72px;
-  padding-top: 34px;
+  margin-top: calc(72px * var(--desktop-scale));
+  padding-top: calc(34px * var(--desktop-scale));
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .achievementTitle {
-  margin: 0 0 24px;
-  font-size: 0.9rem;
+  margin: 0 0 calc(24px * var(--desktop-scale));
+  font-size: calc(0.9rem * var(--desktop-scale));
   font-weight: 700;
   color: #b0b0b0;
   letter-spacing: 0.14em;
@@ -184,7 +185,7 @@
 .achievementGrid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 0.8fr;
-  gap: clamp(24px, 4vw, 56px);
+  gap: calc(clamp(24px, 4vw, 56px) * var(--desktop-scale));
 }
 
 .achievementColumn {
@@ -194,7 +195,7 @@
 .achievementLabel {
   display: block;
   margin-bottom: 16px;
-  font-size: 0.76rem;
+  font-size: calc(0.76rem * var(--desktop-scale));
   font-weight: 700;
   color: #94f083;
   letter-spacing: 0.08em;
@@ -213,7 +214,7 @@
 }
 
 .awardYear {
-  font-size: 0.8rem;
+  font-size: calc(0.8rem * var(--desktop-scale));
   font-weight: 700;
   color: #f5f5f5;
 }
@@ -230,7 +231,7 @@
 .achievementList li {
   position: relative;
   padding-left: 12px;
-  font-size: 0.82rem;
+  font-size: calc(0.82rem * var(--desktop-scale));
   font-weight: 300;
   line-height: 1.6;
   color: #c0c0c0;
@@ -258,32 +259,67 @@
   background-color: rgba(148, 240, 131, 0.85);
 }
 
+/* Tablet & below: the 4-column timeline can't fit, so stack it into a
+   single vertical column with a connector rail running down the left. */
+@media (max-width: 1024px) {
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 0;
+    overflow-x: visible;
+  }
+
+  /* horizontal connector becomes a vertical rail down the left edge */
+  .timeline::before {
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .timelineItem {
+    padding-left: 32px;
+    padding-bottom: 44px;
+  }
+
+  .timelineItem:last-child {
+    padding-bottom: 0;
+  }
+
+  .timelinePoint {
+    top: 6px;
+    left: 0;
+    transform: none;
+  }
+
+  .timelineItem:hover .timelinePoint {
+    transform: scale(1.25);
+  }
+
+  .achievementGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .journey {
     padding: 80px var(--layout-mobile-edge);
     overflow-x: hidden;
   }
 
-  .timeline {
-    grid-template-columns: repeat(4, minmax(230px, 76vw));
-    gap: 24px;
-    overflow-x: auto;
-    padding-bottom: 12px;
-    scroll-snap-type: x proximity;
-    scrollbar-width: thin;
-  }
-
-  .timeline::before {
-    right: auto;
-    width: calc((230px * 4) + (24px * 3));
-  }
-
-  .timelinePeriod {
-    font-size: 2.7rem;
+  .timelineItem {
+    padding-bottom: 36px;
   }
 
   .timelinePhase {
-    font-size: 2.7rem;
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .timelinePeriod {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
   }
 
   .timelineSummary {
@@ -295,7 +331,6 @@
   }
 
   .recordGroup {
-    grid-template-columns: 1fr;
     gap: 8px;
   }
 

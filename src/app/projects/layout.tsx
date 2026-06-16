@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ProjectsMasterDetail from "./ProjectsMasterDetail";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -9,5 +10,5 @@ export default function ProjectsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <ProjectsMasterDetail>{children}</ProjectsMasterDetail>;
 }

@@ -1,14 +1,29 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
-  --layout-max-width: 1500px;
-  --layout-edge: clamp(24px, 6vw, 90px);
+  /* Large-monitor correction scale.
+     Stays 1 on laptops / standard screens so the existing design density is
+     untouched (every calc(x * 1) renders identically). On very wide viewports
+     it is bumped so the whole UI reads ~20% larger — the "Chrome 125%" feel —
+     without browser zoom, the `zoom` property, or transform: scale(). */
+  --desktop-scale: 0.9;
+
+  --layout-max-width: calc(1500px * var(--desktop-scale));
+  --layout-edge: clamp(24px, 6vw, calc(90px * var(--desktop-scale)));
   --layout-mobile-edge: 20px;
-  --layout-gap: clamp(24px, 5vw, 75px);
+  --layout-gap: clamp(24px, 5vw, calc(75px * var(--desktop-scale)));
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --desktop-scale: 1.08;
+  }
 }
 
 * {
   box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 html,
@@ -17,11 +32,21 @@ body {
   padding: 0;
   background-color: #202020;
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 a {

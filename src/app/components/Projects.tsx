@@ -5,7 +5,53 @@ import Link from "next/link";
 import styles from "./Projects.module.css";
 import projectsDataKo from "../data/projects.json";
 import projectsDataEn from "../data/projects_en.json";
+import thumbnailConfig from "../data/projectThumbnails.json";
+import {
+  resolveProjectThumbnailImage,
+  type ProjectThumbnailImage,
+} from "../data/projectThumbnailAssets";
 import { useLanguage } from "../context/LanguageContext";
+import { getTechTags, type Project } from "../types/project";
+
+type GalleryThumbnailConfig = {
+  type: "gallery";
+  images: string[];
+};
+
+const projectThumbnails = thumbnailConfig as Record<
+  string,
+  GalleryThumbnailConfig | { type: string }
+>;
+
+// Selected projects for the home section: only main projects (isMain),
+// ordered by featuredOrder (nulls last).
+function selectHomeProjects(projects: Project[]): Project[] {
+  return projects
+    .filter((p) => p.isMain)
+    .sort(
+      (a, b) =>
+        (a.featuredOrder ?? Number.MAX_SAFE_INTEGER) -
+        (b.featuredOrder ?? Number.MAX_SAFE_INTEGER)
+    );
+}
+
+function getProjectPreviewImage(project: Project): ProjectThumbnailImage | null {
+  const config = projectThumbnails[project.slug];
+
+  if (config?.type === "gallery" && "images" in config && config.images[0]) {
+    return resolveProjectThumbnailImage(config.images[0]);
+  }
+
+  if (project.media.thumbnail) {
+    return { src: project.media.thumbnail };
+  }
+
+  if (project.media.images[0]) {
+    return { src: project.media.images[0] };
+  }
+
+  return null;
+}
 
 /* Abstract preview block — used when a project has no real image.
    Variant is chosen by card index so each card looks distinct. */
@@ -79,7 +125,10 @@ function Preview({ variant }: { variant: number }) {
 
 export default function Projects() {
   const { language } = useLanguage();
-  const projectsData = language === "ko" ? projectsDataKo : projectsDataEn;
+  const allProjects = (
+    language === "ko" ? projectsDataKo : projectsDataEn
+  ) as unknown as Project[];
+  const projectsData = selectHomeProjects(allProjects);
 
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -183,7 +232,10 @@ export default function Projects() {
             className={styles.track}
             style={{ transform: `translate3d(${translateX}px, 0, 0)` }}
           >
-            {projectsData.map((p, index) => (
+            {projectsData.map((p, index) => {
+              const previewImage = getProjectPreviewImage(p);
+
+              return (
               <article
                 key={index}
                 className={styles.card}
@@ -197,9 +249,11 @@ export default function Projects() {
                 <div className={styles.cardText}>
                   <h4 className={styles.projectName}>{p.name}</h4>
                   <p className={styles.projectTagline}>{p.tagline}</p>
-                  <p className={styles.projectDescription}>{p.description}</p>
+                  <p className={styles.projectDescription}>
+                    {p.homeDescription ?? p.description}
+                  </p>
                   <div className={styles.tagList}>
-                    {p.tags.map((tag, tagIndex) => (
+                    {getTechTags(p).map((tag, tagIndex) => (
                       <span key={tagIndex} className={styles.tag}>
                         {tag}
                       </span>
@@ -208,13 +262,25 @@ export default function Projects() {
                 </div>
 
                 <div className={styles.cardPreview}>
-                  <Preview variant={index} />
+                  {previewImage ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={previewImage.src}
+                      width={previewImage.width}
+                      height={previewImage.height}
+                      alt={`${p.name} preview`}
+                      className={styles.previewImage}
+                    />
+                  ) : (
+                    <Preview variant={index} />
+                  )}
                 </div>
               </article>
-            ))}
+              );
+            })}
 
             <Link
-              href="/projects"
+              href="/projects/todit"
               className={styles.ctaCard}
               data-reveal="card"
               data-reveal-delay={String(projectsData.length * 90)}

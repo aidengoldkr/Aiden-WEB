@@ -1,18 +1,26 @@
 {
-  "greeting": "Hello World! 👋",
+  "greeting": "Hello There! 👋",
   "headline": "A Developer Who Designs and Builds Products",
-  "description": "I am <strong>Kunwoo Kim / Aidengoldkr</strong>, a product builder who understands the context of problems and quickly executes ideas to deliver high-quality services. I create value across the entire product lifecycle, focusing on AI, Product Strategy, and Frontend Engineering.",
+  "description": "I am <strong>Kim Kunwoo / Aidengoldkr</strong>, focused on identifying problems, rapidly executing ideas, and turning them into polished products.<br/>I enjoy creating value across the entire product cycle centered around AI · Product · Frontend.",
   "tags": [
     "Product Builder",
-    "Frontend",
-    "AI Service",
     "SW Maestro 17th",
-    "DKSH 6th"
+    "DKSH 6th",
+    "KAIST CCE 14th",
+    "INTJ"
   ],
   "stats": [
-    { "value": "6+", "label": "Years Building" },
-    { "value": "5+", "label": "Projects" },
-    { "value": "3+", "label": "Awards" },
-    { "value": "AI·SW", "label": "Maestro" }
+    {
+      "value": "6+",
+      "label": "Years Building"
+    },
+    {
+      "value": "5+",
+      "label": "Projects"
+    },
+    {
+      "value": "10+",
+      "label": "Awards"
+    }
   ]
 }

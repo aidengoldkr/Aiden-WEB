@@ -1,111 +1,83 @@
 [
   {
-    "year": "2026",
-    "summary": "Focused on building and operating products that meet real users, from service work to startup ideas.",
+    "year": "2020",
+    "summary": "Guri-Namyangju Office of Education Dorong Invention Education Center",
     "records": [
       {
-        "label": "Work",
+        "label": "Activities",
         "items": [
-          "Joined the 17th AI·SW Maestro program",
-          "Built and operated the ON-Alim service",
-          "Delivered freelance products from real client requirements"
+          "Completed the Basic, Advanced, and Expert 3-Year Program at Dorong Invention Education Center",
+          "Selected for and completed the 2022 YIP Youth Inventor Program",
+          "Member of the Korean Intellectual Property Office Youth Inventor Reporters (16th–18th)"
         ]
       },
       {
-        "label": "Learned",
+        "label": "Achievements",
         "items": [
-          "How to turn an idea into a deployable service",
-          "How to improve a product through user feedback"
-        ]
-      },
-      {
-        "label": "Awards",
-        "items": [
-          "Dynamic Dankook Startup Idea Competition, High School Division - Excellence Award"
-        ]
-      }
-    ]
-  },
-  {
-    "year": "2025",
-    "summary": "Started software development in earnest and experienced the full product cycle from planning to implementation.",
-    "records": [
-      {
-        "label": "Work",
-        "items": [
-          "Entered Dankook University Software High School as part of the 6th class",
-          "Planned and developed the inPaser and ToDit projects",
-          "Completed the Asan Youth-preneur Startup Atelier"
-        ]
-      },
-      {
-        "label": "Learned",
-        "items": [
-          "How to implement a business model as a working product",
-          "The flow from problem definition to design, development, and pitching"
-        ]
-      },
-      {
-        "label": "Awards",
-        "items": [
-          "DAEA Life Safety App Challenge - Grand Prize",
-          "Hanyang University Youth Open SW GAME Coding Competition - Excellence Award",
-          "Asan Youth-preneur Demo Day - Pitching Excellence Award and Booth Encouragement Award"
+          "Gyeonggi Student Science Invention Competition - Excellence Award",
+          "Guri-Namyangju Student Science Invention Competition - Gold Prize, Bronze Prize"
         ]
       }
     ]
   },
   {
     "year": "2023",
-    "summary": "Learned to view ideas through technology and market lenses, then expand them into business models.",
+    "summary": "KAIST IP Entrepreneur Program 14th Cohort",
     "records": [
       {
-        "label": "Work",
+        "label": "Activities",
         "items": [
-          "Joined KAIST IP Academy for Gifted Entrepreneurs, 14th class",
-          "Participated in global entrepreneurship training"
+          "Completed the Basic and Advanced Courses of KAIST IP Entrepreneur Program 14th Cohort",
+          "Participated in the 2023 KAIST IP-CEO Global Entrepreneurship Training",
+          "Co-founded the creative making club 'Makers Lab' at Deokso Middle School"
         ]
       },
       {
-        "label": "Learned",
+        "label": "Achievements",
         "items": [
-          "How to evaluate ideas by product value and business potential",
-          "How to connect technology, intellectual property, and market needs"
-        ]
-      },
-      {
-        "label": "Awards",
-        "items": [
-          "KAIST IP Academy Future Technology Team Project - Excellence Award"
+          "KAIST IP-CEO July Intensive Future Technology Team Project - Excellence Award",
+          "Won school invention competitions for 3 consecutive years"
         ]
       }
     ]
   },
   {
-    "year": "2020",
-    "summary": "Built a foundation in spotting problems and shaping invention ideas into concrete outcomes.",
+    "year": "2025",
+    "summary": "Dankook Software High School 6th Cohort",
     "records": [
       {
-        "label": "Work",
+        "label": "Activities",
         "items": [
-          "Joined the Donong Invention Education Center three-year program",
-          "Participated in youth invention programs and invention reporter activities"
+          "Entered Dankook Software High School",
+          "Completed the Asan YouthPreneur Entrepreneur Atelier Program",
+          "Started web outsourcing development work"
         ]
       },
       {
-        "label": "Learned",
+        "label": "Achievements",
         "items": [
-          "How to observe problems and structure solution ideas",
-          "The basics of protecting invention ideas as intellectual property"
+          "DKSH Safety App Challenge - Grand Prize",
+          "Asan YouthPreneur Demo Day High School Pitching Division - Excellence Award"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2026",
+    "summary": "AI·SW Maestro 17th Cohort",
+    "records": [
+      {
+        "label": "Activities",
+        "items": [
+          "Selected as the youngest trainee of AI·SW Maestro 17th Cohort",
+          "Founded Aiden Development",
+          "Co-founded the VERTEX Digital Product Development Department"
         ]
       },
       {
-        "label": "Awards",
+        "label": "Achievements",
         "items": [
-          "Guri-Namyangju Student Invention Exhibition - Gold Medal",
-          "KOFST Korea Science Creativity Competition - Bronze Medal",
-          "KIPA Youth Inventor Program - Encouragement Award and Completion",
-          "Gyeonggi-do Student Invention Exhibition - Excellence Award"
+          "Dynamic Dankook Startup Idea Competition (High School Division) - Excellence Award"
         ]
       }
     ]

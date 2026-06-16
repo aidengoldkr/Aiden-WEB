@@ -2,22 +2,22 @@
   "career": [
     {
       "period": "2026 ~ Present",
-      "title": "17th AI·SW Maestro",
-      "description": "Youngest Trainee"
+      "title": "AI·SW Maestro 17th Cohort",
+      "description": "Youngest trainee"
     },
     {
       "period": "2025 ~ Present",
-      "title": "Dankook University High School of Software",
-      "description": "Enrolled (6th Class)"
+      "title": "Dankook Software High School",
+      "description": "Currently enrolled (6th Cohort)"
     },
     {
       "period": "2023-2024",
-      "title": "KAIST IP Academy for Gifted Entrepreneurs",
+      "title": "KAIST IP Entrepreneur Program 14th Cohort",
       "description": "Completed Basic & Advanced Courses"
     },
     {
       "period": "2020-2022",
-      "title": "Donong Invention Education Center",
+      "title": "Guri·Namyangju Dorong Invention Education Center",
       "description": "Completed 3-Year Program"
     }
   ],
@@ -31,41 +31,42 @@
     {
       "year": "2025",
       "items": [
-        "DAEA Life Safety App Challenge - Grand Prize (1st Place)",
-        "Hanyang University Youth Open SW GAME Coding Competition - Excellence Award",
-        "Asan Youth-preneur Demo Day - Pitching Excellence Award / Booth Encouragement Award"
+        "DKSH Safety App Challenge - Grand Prize (1st Place)",
+        "Hanyang University ERICA Youth OpenSW GAME Coding Competition - Excellence Award",
+        "Asan YouthPreneur Demo Day - Pitching Division Excellence Award / Booth Division Encouragement Award"
       ]
     },
     {
       "year": "2023",
       "items": [
-        "KAIST IP Academy Future Technology Team Project - Excellence Award"
+        "KAIST IP Entrepreneur Program July Intensive Future Technology Team Project - Excellence Award"
       ]
     },
     {
       "year": "~ 2022",
       "items": [
-        "Guri-Namyangju Student Invention Exhibition - Gold Medal",
-        "KOFST Korea Science Creativity Competition - Bronze Medal",
-        "KIPA Youth Inventor Program (YIP) - Encouragement Award & Completion",
-        "Gyeonggi-do Student Invention Exhibition - Excellence Award",
-        "Ministry of Science and ICT Science Day Commendation",
-        "Guri-Namyangju Student Invention Exhibition - Bronze Medal"
+        "Guri-Namyangju Student Science Invention Competition - Gold Prize",
+        "National Science Creativity Competition - Bronze Prize",
+        "KIPA YIP Youth Inventor Program - Encouragement Award & Completion",
+        "Gyeonggi Student Science Invention Competition - Excellence Award",
+        "Science Day Commendation from the Ministry of Science and ICT",
+        "Guri·Namyangju Student Science Invention Competition - Bronze Prize"
       ]
     }
   ],
   "experience": [
-    "2022 Youth Inventor Program (YIP) - Completed",
-    "KIPO Youth Invention Reporter Corps - 16th~17th term",
+    "2022 YIP Youth Inventor Program - Completed",
+    "KIPO Youth Inventor Reporters - 16th~18th",
     "KAIST IP-CEO 2023 Global Entrepreneurship Training",
-    "2025 Asan Youth-preneur Startup Atelier - Completed",
-    "DKSH VERTEX Digital Convergence Product Dev Dept - 1st President & Co-founder",
-    "ESSENTIA Science Information & Communications Dept Chief"
+    "2025 Asan YouthPreneur Entrepreneur Atelier - Completed",
+    "DKSH VERTEX Digital Convergence Product Development Department - 1st President & Co-founder",
+    "Deokso Middle School Makers Lab - Co-founder",
+    "ESSENTIA Science Director of Information & Communications"
   ],
   "certificates": [
-    "COS Pro Python 1st Grade",
-    "COS Pro C++ 1st Grade",
+    "COS Pro Python Level 1",
+    "COS Pro C++ Level 1",
     "TRIZ Specialist Level 1",
-    "1 Registered Patent / 12 Patent Applications"
+    "1 Registered Patent / 11 Patent Applications"
   ]
 }

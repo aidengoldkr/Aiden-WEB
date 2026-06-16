@@ -1,0 +1,49 @@
+{
+  "todit": {
+    "type": "gallery",
+    "images": [
+      "todit/1.png",
+      "todit/2.png",
+      "todit/3.png",
+      "todit/4.png"
+    ]
+  },
+  "baekjoon-memorial": {
+    "type": "gallery",
+    "images": [
+      "baekjoon-memorial/1.png",
+      "baekjoon-memorial/2.png",
+      "baekjoon-memorial/3.png"
+    ]
+  },
+  "patentsense": {
+    "type": "gallery",
+    "images": [
+      "patantsense/1.png",
+      "patantsense/2.png"
+    ]
+  },
+  "on-alim": {
+    "type": "gallery",
+    "images": [
+      "on-alim/1.png",
+      "on-alim/2.png"
+    ]
+  },
+  "safe-ground": {
+    "type": "gallery",
+    "images": [
+      "safe_ground/1.png",
+      "safe_ground/2.png",
+      "safe_ground/3.png"
+    ]
+  },
+  "aiden-portfolio": {
+    "type": "iframe",
+    "src": "https://aidengoldkr.dev/"
+  },
+  "icaros": {
+    "type": "iframe",
+    "src": "https://sim.icaros.kr/"
+  }
+}

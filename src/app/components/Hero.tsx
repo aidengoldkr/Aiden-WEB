@@ -35,17 +35,17 @@ export default function Hero() {
         <div className={styles.tags}>
           <div className={styles.tag}>
             <span className={`${styles.dot} ${styles.dotGreen}`}></span>
-            Product Strategy
+            Idea
           </div>
           <div className={styles.tagDivider}></div>
           <div className={styles.tag}>
             <span className={`${styles.dot} ${styles.dotBlue}`}></span>
-            UX/UI Planning
+            Business
           </div>
           <div className={styles.tagDivider}></div>
           <div className={styles.tag}>
             <span className={`${styles.dot} ${styles.dotGreen}`}></span>
-            Data-driven Decision
+            Software
           </div>
         </div>
       </div>

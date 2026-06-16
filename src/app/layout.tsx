@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "김건우 | Aidengoldkr",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "김건우 | Aidengoldkr",
@@ -80,6 +80,7 @@ export const viewport: Viewport = {
 };
 
 import { LanguageProvider } from "./context/LanguageContext";
+import QueryProvider from "./providers/QueryProvider";
 
 export default function RootLayout({
   children,
@@ -89,9 +90,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <QueryProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </QueryProvider>
       </body>
     </html>
   );
