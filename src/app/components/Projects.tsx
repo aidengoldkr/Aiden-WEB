@@ -221,7 +221,7 @@ export default function Projects() {
           <h2 className={styles.title} data-reveal data-reveal-delay="80">Building products from ideas.</h2>
           <p className={styles.subtitle} data-reveal data-reveal-delay="140">
             {language === "ko"
-              ? "문제를 정의하고, 서비스로 구현한 대표 프로젝트입니다."
+              ? "문제를 정의하고, 서비스로 구현한 대표 프로젝트."
               : "Key projects where I defined problems and built services."}
           </p>
         </div>

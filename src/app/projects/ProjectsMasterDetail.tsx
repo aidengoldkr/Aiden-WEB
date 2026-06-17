@@ -34,7 +34,7 @@ export default function ProjectsMasterDetail({
       <h1 className={headerStyles.title}>Building products from ideas.</h1>
       <p className={headerStyles.lead}>
         {language === "ko"
-          ? "문제를 정의하고, 서비스로 구현한 프로젝트 모음입니다."
+          ? "문제를 정의하고, 서비스로 구현한 프로젝트 모음."
           : "A collection of projects where I defined problems and built services."}
       </p>
     </div>
