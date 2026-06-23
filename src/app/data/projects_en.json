@@ -36,8 +36,15 @@
       "database": [
         "Supabase"
       ],
-      "infra": [],
-      "ai": [],
+      "infra": [
+        "AWS Lambda",
+        "API Gateway"
+      ],
+      "ai": [
+        "OCR",
+        "LLM",
+        "Insight Parser"
+      ],
       "tools": []
     },
     "team": {
@@ -170,11 +177,11 @@
       "metrics": [
         {
           "label": "Development",
-          "value": "Built and deployed in a short time"
+          "value": "Built and deployed in roughly 10 hours"
         },
         {
-          "label": "Reach",
-          "value": "Spread rapidly through the community"
+          "label": "Participants",
+          "value": "200+ users participated"
         }
       ],
       "press": []
