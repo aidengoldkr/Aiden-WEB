@@ -1,0 +1,244 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #fff;
+  color: #414141;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "맑은 고딕",
+    "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 40px 16px 80px;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* ── 리로포털 ── */
+.portal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 44px;
+  margin-bottom: 18px;
+  background: #f1f3f5;
+  border-radius: 10px;
+}
+
+.portalText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #414141;
+}
+
+.portalArrow {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── 카드 ── */
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 40px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* ── 상단 인사 ── */
+.top {
+  text-align: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.hello p {
+  margin: 10px 0 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #414141;
+  line-height: 36px;
+}
+
+.hello strong {
+  font-weight: 700;
+}
+
+/* ── 본문 ── */
+.contents {
+  max-width: 358px;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0 10px;
+  padding: 0;
+  height: 50px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+}
+
+.tabActive {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0091ea;
+}
+
+.tabInactive {
+  font-size: 16px;
+  font-weight: 400;
+  color: #c8c8c8;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: #e0e0e0;
+}
+
+/* ── 입력 ── */
+.input {
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 18px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: #fff;
+  color: #414141;
+  font-family: inherit;
+  font-size: 16px;
+  outline: 0;
+}
+
+.input:focus {
+  border-color: #0091ea;
+}
+
+.input::placeholder {
+  color: #adb5bd;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #414141;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.idInput {
+  margin-top: 0;
+}
+
+.idInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.infoIc {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  flex: none;
+}
+
+.idInfo p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+}
+
+.idInfo strong {
+  color: #414141;
+  font-weight: 700;
+}
+
+.pwInput {
+  margin-top: 10px;
+}
+
+/* ── 로그인 버튼 ── */
+.loginBtn {
+  width: 100%;
+  height: 56px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 4px;
+  background: #0091ea;
+  color: #fff;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background: #0081d0;
+}
+
+/* ── 찾기 ── */
+.findArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.findBtn {
+  font-size: 15px;
+  color: #666;
+  cursor: pointer;
+}
+
+.findBtn:hover {
+  color: #414141;
+}
+
+.findDivider {
+  width: 1px;
+  height: 12px;
+  background: #e0e0e0;
+}
+
+/* ── 모바일 ── */
+@media (max-width: 480px) {
+  .card {
+    padding: 44px 24px;
+  }
+
+  .hello p {
+    font-size: 21px;
+    line-height: 32px;
+  }
+}

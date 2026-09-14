@@ -1,0 +1,268 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #fff;
+  color: #202124;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: auto;
+}
+
+.page a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+.page a:hover {
+  text-decoration: underline;
+}
+
+/* ── Top bar ── */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 6px;
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15px;
+}
+
+.topRight {
+  gap: 8px;
+}
+
+.topRight a {
+  padding: 0 4px;
+  margin-right: 4px;
+}
+
+.appsBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.appsBtn:hover {
+  background: rgba(60, 64, 67, 0.08);
+}
+
+.signIn {
+  background: #1a73e8;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  padding: 9px 23px;
+  cursor: pointer;
+}
+
+.signIn:hover {
+  background: #1b66c9;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+/* ── Center ── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  padding-top: max(20px, calc(50vh - 260px));
+}
+
+.logo {
+  height: 92px;
+  margin-bottom: 25px;
+}
+
+.logo svg {
+  display: block;
+  width: 272px;
+  height: 92px;
+  max-width: 100%;
+}
+
+.form {
+  width: 100%;
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 14px 0 16px;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  transition: box-shadow 0.15s;
+}
+
+.searchBox:hover,
+.searchBox:focus-within {
+  border-color: rgba(223, 225, 229, 0);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.searchIcon {
+  display: inline-flex;
+  margin-right: 13px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #202124;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.trailingIcons {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 18px;
+}
+
+.btn {
+  background: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: inherit;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  min-width: 54px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: #dadce0;
+  color: #202124;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.langOffer {
+  margin: 0;
+  padding-top: 18px;
+  color: #4d5156;
+  font-size: 13px;
+}
+
+.langOffer a {
+  color: #1a0dab;
+}
+
+/* ── Footer ── */
+.footer {
+  background: #f2f2f2;
+  color: #70757a;
+  font-size: 14px;
+}
+
+.footerCountry {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footerLeft,
+.footerRight {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  display: inline-block;
+  color: #70757a;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .topLeft {
+    display: none;
+  }
+
+  .main {
+    padding-top: max(20px, calc(50vh - 220px));
+  }
+
+  .logo svg {
+    width: 200px;
+    height: auto;
+  }
+
+  .footerCountry {
+    padding: 12px 16px;
+  }
+
+  .footerLinks {
+    justify-content: center;
+    padding: 0 8px;
+  }
+
+  .footerLinks a {
+    padding: 12px 10px;
+  }
+}
